@@ -1,5 +1,7 @@
 # MagicCenter
 
+<img src="assets/magiccenter-icon.png" alt="MagicCenter app icon" width="160" height="160">
+
 A local macOS menu bar app that turns a physical one-finger press in the Magic Mouse's center strip into middle mouse button 2. Requires macOS 13 or later.
 
 ## Use
