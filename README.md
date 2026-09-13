@@ -6,7 +6,7 @@ A local macOS menu bar app that turns a physical one-finger press in the Magic M
 
 ## Demo
 
-<video src="https://github.com/user-attachments/assets/707de32a-9f13-478b-a024-a951f4f6bd2c" width="360" height="640" controls></video>
+<video src="https://github.com/user-attachments/assets/e89fb0eb-81da-4a58-b837-6a6cc4351ce8" width="360" height="640" controls></video>
 
 ## Use
 
@@ -53,3 +53,4 @@ The app builds for the current Mac's architecture. The existing packaged release
 Commit the source files, scripts, icons, background artwork, README and dependency file. `.gitignore` excludes generated `build/`, `dist/`, `.venv/`, and disk images. Upload DMGs to GitHub Releases instead of committing them.
 
 A license has not yet been selected. Add one before publishing if you want to grant reuse rights explicitly.
+
