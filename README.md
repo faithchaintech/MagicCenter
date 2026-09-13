@@ -6,9 +6,7 @@ A local macOS menu bar app that turns a physical one-finger press in the Magic M
 
 ## Demo
 
-<a href="AppDemoVideo.mp4"><img src="assets/demo-preview.jpg" alt="Watch the MagicCenter demo" width="280"></a>
-
-[▶ Watch the demo (7 seconds)](AppDemoVideo.mp4)
+<video src="https://github.com/user-attachments/assets/707de32a-9f13-478b-a024-a951f4f6bd2c" width="360" height="640" controls></video>
 
 ## Use
 
