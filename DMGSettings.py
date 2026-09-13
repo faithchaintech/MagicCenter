@@ -1,0 +1,21 @@
+from pathlib import Path
+base=Path(defines.get('source','.')).resolve()
+files=[str(base/'build'/'MagicCenter.app')]
+symlinks={'Applications':'/Applications'}
+format='UDZO'
+filesystem='HFS+'
+background=str(base/'InstallerBackground.png')
+window_rect=((240,240),(660,500))
+show_status_bar=False
+show_tab_view=False
+show_toolbar=False
+show_sidebar=False
+show_pathbar=False
+default_view='icon-view'
+include_icon_view_settings=True
+include_list_view_settings=False
+arrange_by=None
+icon_size=128
+text_size=14
+icon_locations={'MagicCenter.app':(165,200),'Applications':(495,200)}
+hide_extensions=[]
