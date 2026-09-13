@@ -4,6 +4,12 @@
 
 A local macOS menu bar app that turns a physical one-finger press in the Magic Mouse's center strip into middle mouse button 2. Requires macOS 13 or later.
 
+## Demo
+
+<a href="AppDemoVideo.mp4"><img src="assets/demo-preview.jpg" alt="Watch the MagicCenter demo" width="280"></a>
+
+[▶ Watch the demo (7 seconds)](AppDemoVideo.mp4)
+
 ## Use
 
 1. Open MagicCenter.app. The Magic Mouse outline icon in the menu bar opens settings. The Dock icon is hidden by default; toggle “Show in Dock” in the menu at any time without rebuilding or resetting permissions.
