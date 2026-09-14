@@ -18,9 +18,13 @@ A local macOS menu bar app that turns a physical one-finger press in the Magic M
 
 Pause or quit from the menu bar. To remove the app, quit it, turn off Launch at login if enabled, and move it to Trash.
 
+## Upgrading to 1.3
+
+Version 1.3 uses the bundle identifier `com.faithchaintech.MagicCenter`. Before replacing an older version, turn off its Launch at login setting and quit it. After installing 1.3, grant Accessibility permission again, review your preferences, and re-enable Launch at login if desired. macOS treats the new identifier as a different app identity, so existing permissions and preferences do not automatically transfer.
+
 ## Build and verification
 
-Run `./build.sh` with Xcode command line tools. It creates `build/MagicCenter.app` and signs it ad hoc for local use. An ad-hoc signature changes when the binary changes. After replacing an installed build, reset only this app’s stale grant using `tccutil reset Accessibility local.victor.MagicCenter`, then launch the installed app and grant Accessibility again. Do not validate the app’s permission by launching its executable from an already trusted terminal; launch it through Finder or `open`.
+Run `./build.sh` with Xcode command line tools. It creates `build/MagicCenter.app` and signs it ad hoc for local use. An ad-hoc signature changes when the binary changes. After replacing an installed build, reset only this app’s stale grant using `tccutil reset Accessibility com.faithchaintech.MagicCenter`, then launch the installed app and grant Accessibility again. Do not validate the app’s permission by launching its executable from an already trusted terminal; launch it through Finder or `open`.
 
 Run `./test.sh` for the gesture and CoreGraphics conversion tests. Run the app executable with `--diagnose` for device enumeration, or `--integration-test` for in-process CoreGraphics conversion tests (no clicks are posted).
 
@@ -44,7 +48,7 @@ Compiled and tested locally on macOS 26.6.1 (Intel). Device detection and event-
 
 ## Package an installer
 
-Run `./build-dmg.sh` from this folder. It builds the app, creates a local `.venv` with the pinned DMG packaging dependency when needed, and writes the styled drag-to-Applications installer to `dist/MagicCenter-1.2.dmg`. Python 3 and macOS disk image tools are required.
+Run `./build-dmg.sh` from this folder. It builds the app, creates a local `.venv` with the pinned DMG packaging dependency when needed, and writes the styled drag-to-Applications installer to `dist/MagicCenter-1.3.dmg`. Python 3 and macOS disk image tools are required.
 
 The app builds for the current Mac's architecture. The existing packaged release was built on Intel. Packages are locally signed, not Apple-notarized.
 

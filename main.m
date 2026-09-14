@@ -343,7 +343,8 @@ int main(int argc,const char **argv) {
             if (list) { for (CFIndex i=0;i<CFArrayGetCount(list);i++) { MTDevice dev=CFArrayGetValueAtIndex(list,i); int family=0; Family(dev,&family); printf("Device: %s; family=%d\n",product(dev).UTF8String,family); } CFRelease(list); }
             printf("Accessibility: %s\n",AXIsProcessTrusted()?"enabled":"not enabled"); return 0;
         }
-        if ([NSRunningApplication runningApplicationsWithBundleIdentifier:@"local.victor.MagicCenter"].count>1) return 0;
+        NSString *bundleIdentifier = NSBundle.mainBundle.bundleIdentifier;
+        if (bundleIdentifier.length && [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleIdentifier].count>1) return 0;
         NSApplication *application=NSApplication.sharedApplication; [application setActivationPolicy:[NSUserDefaults.standardUserDefaults boolForKey:@"showInDock"]?NSApplicationActivationPolicyRegular:NSApplicationActivationPolicyAccessory];
         App *delegate=[App new]; application.delegate=delegate; [application run];
     }
